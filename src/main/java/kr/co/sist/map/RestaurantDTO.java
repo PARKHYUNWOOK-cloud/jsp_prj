@@ -1,19 +1,20 @@
 package kr.co.sist.map;
 
-import java.sql.Date;
+import java.util.Date;
 
-public class RestaurantDTO {
+public class RestaurantDTO {	
 
-	private int rest_num;//식당 식별번호
-	private String id, rest_name, menu, info;//회원아이디 , 식당명, 메뉴, 정보
-	private double lat, lng;//위도, 경도
-	private Date input_date;//입력일
-	
+
+	private int rest_num; //식당 식별 번호
+	private String id,rest_name,menu,info; // 회원 아이디 , 식당명, 메뉴, 정보
+	private double lat,	lng; //위도, 경도
+	private Date input_data; //입력일
 	public RestaurantDTO() {
+		super();
 	}
-	
 	public RestaurantDTO(int rest_num, String id, String rest_name, String menu, String info, double lat, double lng,
-			Date input_date) {
+			Date input_data) {
+		super();
 		this.rest_num = rest_num;
 		this.id = id;
 		this.rest_name = rest_name;
@@ -21,7 +22,7 @@ public class RestaurantDTO {
 		this.info = info;
 		this.lat = lat;
 		this.lng = lng;
-		this.input_date = input_date;
+		this.input_data = input_data;
 	}
 	public int getRest_num() {
 		return rest_num;
@@ -65,18 +66,18 @@ public class RestaurantDTO {
 	public void setLng(double lng) {
 		this.lng = lng;
 	}
-	public Date getInput_date() {
-		return input_date;
+	public Date getInput_data() {
+		return input_data;
 	}
-	public void setInput_date(Date input_date) {
-		this.input_date = input_date;
+	public void setInput_data(Date input_data) {
+		this.input_data = input_data;
 	}
 	@Override
 	public String toString() {
-		return "RestaurantDTO [rest_num=" + rest_num + ", id=" + id + ", rest_name=" + rest_name + ", menu=" + menu
-				+ ", info=" + info + ", lat=" + lat + ", lng=" + lng + ", input_date=" + input_date + "]";
+		return "restaurantDTO [rest_num=" + rest_num + ", id=" + id + ", rest_name=" + rest_name + ", menu=" + menu
+				+ ", info=" + info + ", lat=" + lat + ", lng=" + lng + ", input_data=" + input_data + "]";
 	}
 	
 	
-
+	
 }
