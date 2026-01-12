@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../fragments/siteProperty.jsp" %>
-
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 
-<title>사용자 메인</title>
+<title>맵 연습</title>
 <script src="http://192.168.10.77/jsp_prj/common/js/color-modes.js"></script>
 
 <link rel = "shortcut icon" href="http://192.168.10.77/jsp_prj/common/images/favicon.ico">
@@ -24,7 +24,7 @@
 
 <meta name="theme-color" content="#712cf9">
 <link href="http://192.168.10.77/jsp_prj/common/css/carousel.css" rel="stylesheet">
-<jsp:include page="fragments/bootstrap_css.jsp"/>
+<jsp:include page="../fragments/bootstrap_css.jsp"/>
 <style type="text/css">
 
 #wrap{ margin: 0px auto; width:1200px; height:1000px;}
@@ -45,7 +45,7 @@ $(function(){
 </head>
 <body>
 	<header data-bs-theme="dark">
-		<jsp:include page="fragments/header.jsp"/>
+		<jsp:include page="../fragments/header.jsp"/>
 	</header>
 	<main>
 		
@@ -57,30 +57,7 @@ $(function(){
 			<hr class="featurette-divider">
 			<div class="row featurette">
 				<div class="col-md-7">
-					사용자 메인 페이지 <br>
-					
-					사용자에게 제공할 contents...<br>
-					<c:choose>
-					<c:when test="${not empty sessionScope.userId}">
-                		<br>
-						<img src="${CommonURL }/upload/${sessionScope.userProfile}" id="preview" style="width:100px; height: 100px; border-radius:50px; "/>
-						<br>
-						<c:out value="${userId }"/>(
-						<a href="${CommonURL }/mypage/mypage.jsp"><c:out value="${userName}"/></a>)<br>
-						님 안녕하세요? <a href="${CommonURL }/login/logout.jsp">로그아웃</a>
-					<a href="${CommonURL}/map/mapList.jsp">등록한 장소</a>
-						<br>
-					</c:when>
-					
-					<c:otherwise>
-					
-					<a href="login/loginFrm.jsp">로그인</a>
-					
-					</c:otherwise>
-					</c:choose>
-					
-					<a href="${CommonURL}/board/boardList.jsp">게시판</a>
-					
+					회원가입 양식
 				</div>
 			</div>
 			<hr class="featurette-divider">
@@ -88,7 +65,7 @@ $(function(){
 		<!-- /.container -->
 		<!-- FOOTER -->
 		<footer class="container">
-			<jsp:include page="fragments/footer.jsp"/>
+			<jsp:include page="../fragments/footer.jsp"/>
 		</footer>
 	</main>
 
